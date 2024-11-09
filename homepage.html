@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Homepage</title>
+    <link rel="stylesheet" href="main-styles.css" id="theme-link">
+</head>
+<body>
+    <header class="header">
+        <h1>Portfolio Showcase</h1>
+        <div class="header-content">
+            <nav id="navbar">
+                <div id="logo">
+                    <a href="homepage.html">
+                        <img src="dtulogo.png" alt="Logo">
+                    </a>
+                </div>
+                <ul class="nav-items">
+                    <li class="item"><a href="#top">Home</a></li>
+                    <li class="item"><a href="#profiles">Profiles</a></li>
+                    <li class="item"><a href="#mission">Mission</a></li>
+                    <li class="item" target="_blank"><a href="https://dtutimes.dtu.ac.in/" target="_blank">Explore</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+
+    <section class="intro">
+        <h2>Welcome to The Web Development Department</h2>
+        <p>A platform for exploring innovative projects and talents. Discover our mission, vision, and learnings in web development.</p>
+    </section>
+
+    <section class="portfolio-links" id="profiles">
+        <h1 class="portfolio-heading">Profiles</h1>
+        
+        <section class="portfolio-item" id="sanyam">
+            <a href="sanyam.html" class="portfolio-link">
+                <div class="portfolio-content">
+                    <div class="portfolio-info">
+                        <p>Hello there ,I am a Btech CSE student at IIT BAWANA</p>
+                    </div>
+                    <div class="image-placeholder">
+                        <img src="pro2.jpg" alt="Sanyam Image">
+                        <p class="portfolio-name">Sanyam Jain</p>
+                    </div>
+                </div>
+            </a>
+        </section>
+    
+        <section class="portfolio-item" id="sambhav">
+            <a href="sambhav.html" class="portfolio-link">
+                <div class="portfolio-content">
+                    <div class="portfolio-info">
+                        <p>Student, Programmer, Developer, etc but majorly human</p>
+                    </div>
+                    <div class="image-placeholder">
+                        <img src="pro1.jpg" alt="Sambhav Image">
+                        <p class="portfolio-name">Sambhav Sharma</p>
+                    </div>
+                </div>
+            </a>
+        </section>
+    
+        <section class="portfolio-item" id="apple">
+            <a href="apple.html" target="_blank" class="portfolio-link">
+                <div class="portfolio-content">
+                    <div class="portfolio-info">
+                        <p>Don't I look tasty?</p>
+                    </div>
+                    <div class="image-placeholder">
+                        <img src="apple.jpg" alt="Apple Image">
+                        <p class="portfolio-name">Apple</p>
+                    </div>
+                </div>
+            </a>
+        </section>
+
+        <section class="portfolio-item" id="mango">
+            <a href="mango.html" target="_blank" class="portfolio-link">
+                <div class="portfolio-content">
+                    <div class="portfolio-info">
+                        <p>Eat me tonight </p>
+                    </div>
+                    <div class="image-placeholder">
+                        <img src="mango.jpg" alt="Mango Image">
+                        <p class="portfolio-name">Mango</p>
+                    </div>
+                </div>
+            </a>
+        </section>
+
+        <section class="portfolio-item" id="orange">
+            <a href="orange.html" target="_blank" class="portfolio-link">
+                <div class="portfolio-content">
+                    <div class="portfolio-info">
+                        <p> I am juicy do you want me ?</p>
+                    </div>
+                    <div class="image-placeholder">
+                        <img src="orange.jpg" alt="Orange Image">
+                        <p class="portfolio-name">Orange</p>
+                    </div>
+                </div>
+            </a>
+        </section>
+    </section>    
+
+    <section class="about-section" id="mission">
+        <h3>About the Web Development Department</h3>
+        <div class="about-content">
+            <div class="aim-mission">
+                <h4>Our Aim & Mission</h4>
+                <p>Delhi Technological University</p>
+                <p>- Building strong technical foundations</p>
+                <p>- Fostering creativity and innovation</p>
+                <p>- Enhancing skills in HTML, CSS, and beyond</p>
+            </div>
+            <div class="course-outcomes">
+                <h4>Course Outcomes</h4>
+                <ul>
+                    <li>Proficiency in HTML and CSS</li>
+                    <li>Understanding of responsive web design</li>
+                    <li>Solid foundation in web development principles</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>© 2024 Web Dev Project</p>
+    </footer>
+    <script>
+            document.addEventListener("DOMContentLoaded", () => {
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            const profilesLink = document.querySelector('a[href="#profiles"]');
+            const homeLink = document.querySelector('a[href="#top"]');
+
+            // Function to reset animations by removing .in-view classes
+            function resetAnimations() {
+                portfolioItems.forEach(item => item.classList.remove('in-view'));
+            }
+
+            // Reset animations when clicking "Profiles" or "Home" links
+            profilesLink.addEventListener('click', resetAnimations);
+            homeLink.addEventListener('click', resetAnimations);
+
+            // Reapply IntersectionObserver for scroll-based animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            // Observe each portfolio item
+            portfolioItems.forEach(item => observer.observe(item));
+        });
+    </script>
+</body>
+</html>
