@@ -1,0 +1,322 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+.Home{
+    display: none
+}
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    z-index: 5;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#logo{
+    margin: 10px 34px;
+}
+
+#logo img{
+    height: 45px;
+    border-radius: 15px;
+    margin: 3px 6px;
+}
+
+
+#navbar ul{
+    display: flex;
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 1.5rem;
+    margin: 3px 33px;
+    
+}
+#navbar ul li a{
+    display: block;
+    padding: 4px 10px ;
+    text-decoration: none;
+    color: white;
+    border-radius: 22px;
+    transition: all .2s ease-in  ;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+    
+}  
+
+
+
+/* Home */
+
+#home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 525px;
+}
+
+#cont{
+    border: 2px solid white;
+    height: 250px;
+    position: relative;
+    top: 50px;
+    padding: 10px 20px;
+    background-color: black;
+    opacity: .5;
+    border-radius: 20px;
+}
+#home h1{
+    font-size: 5rem;
+    color: white;
+    font-weight: 60;
+    position: relative;
+    top: 10px;
+    
+}#home p{
+    font-size: 2rem;
+    color: white;
+    position: relative;
+    top: 20px;
+    display: inline-block;
+    left: 120px;
+    text-align: center;
+    
+}
+
+#home::before {    
+    content: "";
+    background: url('bg.jpg') no-repeat center center/cover ;
+    background-size: cover;
+    position: absolute;
+    height: 110%;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+
+
+/* Know Me */
+#knowme{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 170px;
+    border: 2px solid #998760;
+    margin: 100px auto;
+    border-radius: 20px;
+    width: 90%;
+    background-color: #fdecc6d9;
+    
+}
+#knowme h1{
+    font-size: 2rem;
+    padding: 15px 5px;
+    color: #250000;
+}
+#knowme p{
+    font-size: 1.5rem;
+    color: #250000;
+}
+.content{
+    margin: 40px 60px;
+}
+
+
+
+
+
+/* My Work */
+
+#mywork{
+    position: relative;
+    top: 200px;
+    display: flex;
+    flex-direction: column  ;
+}
+#mywork h1{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.project{
+    padding: 30px 10px;
+}
+.project img{
+    width: 41%;
+    margin: 20px 30px;
+    border-radius: 30px;
+    
+}
+
+.pro{
+    display: flex;
+    justify-content: space-between;
+    margin: 2px 30px;
+    overflow: hidden;
+}
+.pro p{
+    border: 2px solid #d7a16d;
+    margin: 20px 30px;
+    background-color: #ffe4ca;
+    padding: 50px 50px;
+    font-size: 1.5rem;
+    border-radius: 30px;
+    padding: 40px 38px;
+}
+
+
+
+/* Contact Me */
+#contactme{
+    position: relative;
+    top: 310px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#contactme h1{
+    text-align: center;
+
+}
+.contact{
+    display: flex;
+    margin: 34px;
+}
+
+.contact .box{
+    border: 2px solid orange;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 35px 30px;
+    padding: 20px 20px;
+    width: 330px;
+    background-color: #001f54;
+    height: 210px;
+}
+.contact .box img{
+    height: 115px;
+    border-radius: 100px;
+    transition: all .3s ease-in-out;
+    position: relative;
+    top: 25px;
+}
+
+.contact .box a{
+    padding: 20px 20px;
+    position: relative;
+    top: 20px;
+}
+#phone a{
+    text-decoration: none;
+    color: orange;
+    z-index: -1;
+    position: relative;
+    transition: all .3s ease-in-out;
+
+}
+#phone:hover  a{
+    z-index: 1;
+    font-size: 20px;
+    position: relative;
+    top: -6px;
+}
+#phone:hover  img{
+    position: relative;
+    top: 0px;
+    height: 130px;
+}
+
+#email a{
+    text-decoration: none;
+    color: orange;
+    z-index: -1;
+    position: relative;
+    transition: all .3s ease-in-out;
+
+}
+#email:hover  a{
+    z-index: 1;
+    font-size: 20px;
+    position: relative;
+    top: -6px;
+}
+#email:hover  img{
+    position: relative;
+    top: 0px;
+    height: 130px;
+}
+
+#address a{
+    /* padding: 20px 20px; */
+    text-decoration: none;
+    color: orange;
+    z-index: -1;
+    position: relative;
+    transition: all .3s ease-in-out;
+
+}
+#address:hover  a{
+    z-index: 1;
+    font-size: 20px;
+    position: relative;
+    top: -6px;
+}
+#address:hover  img{
+    position: relative;
+    top: 0px;
+    height: 130px;
+}
+
+/* Disclaimer */
+#disclaimer{
+    position: relative;
+    top: 90px;
+    border: 2px solid;
+    background-color: black;
+    width: 100%;
+}
+#disclaimer h1{
+    padding: 20px 10px;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+#disclaimer p{
+    text-align: center;
+    color: white;
+    padding-bottom: 30px;
+}
