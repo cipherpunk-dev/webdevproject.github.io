@@ -65,7 +65,12 @@
 
   <script>
     const noButton = document.getElementById('no');
-    
+    const yesButton = document.getElementById('yes');
+
+    yesButton.addEventListener('click', () => {
+      window.location.href = 'thank-you.html';
+    });
+
     noButton.addEventListener('mouseover', () => {
       const randomX = Math.floor(Math.random() * (window.innerWidth - noButton.clientWidth));
       const randomY = Math.floor(Math.random() * (window.innerHeight - noButton.clientHeight));
