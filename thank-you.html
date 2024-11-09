@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You!</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #fffae6;
+    }
+
+    h1 {
+      position: absolute;
+      font-size: 3em;
+      color: #333;
+    }
+
+    .emoji {
+      font-size: 3em;
+      position: absolute;
+      animation: bounce 4s infinite ease-in-out;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-200px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Thank You!</h1>
+  <script>
+    function createEmoji() {
+      const emoji = document.createElement('div');
+      emoji.classList.add('emoji');
+      emoji.textContent = '😊';
+      document.body.appendChild(emoji);
+
+      emoji.style.left = Math.random() * window.innerWidth + 'px';
+      emoji.style.top = Math.random() * window.innerHeight + 'px';
+      emoji.style.animationDuration = Math.random() * 3 + 2 + 's';
+
+      setTimeout(() => {
+        document.body.removeChild(emoji);
+      }, 5000);
+    }
+
+    setInterval(createEmoji, 500);
+  </script>
+</body>
+</html>
