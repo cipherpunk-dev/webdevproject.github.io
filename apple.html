@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            width: 80%;
+            max-width: 800px;
+            background-color: #fdf5e6; /* parchment-like color */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border: 2px solid #d4a373;
+            position: relative;
+        }
+        .container::before,
+        .container::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 2px dashed #d4a373;
+            border-radius: 10px;
+            top: -5px;
+            left: -5px;
+            opacity: 0.5;
+            z-index: -1;
+        }
+        h1 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+            font-family: 'Georgia', serif;
+        }
+        .apple {
+            width: 150px;
+            height: 150px;
+            background-image: url('apple-1.jpg'); /* apple-1.png with transparent background */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+            transition: transform 0.5s, background-image 0.5s;
+            margin: 20px 0;
+        }
+        .apple:hover {
+            background-image: url('apple-cut.png'); /* apple-2.png with transparent background */
+            transform: scale(1.1) rotate(-10deg);
+        }
+        .facts {
+            margin-top: 20px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            font-family: 'Times New Roman', Times, serif;
+            text-align: left;
+        }
+        .fact {
+            margin-bottom: 10px;
+            line-height: 1.6;
+            color: #333;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Apple Portfolio</h1>
+        <div class="apple" id="apple"></div>
+        <div class="facts">
+            <div class="fact"><strong>Health Benefits:</strong> Apples are rich in fiber and antioxidants.</div>
+            <div class="fact"><strong>Nutritional Value:</strong> 1 medium apple contains approximately 95 calories, 25g of carbs, and 4g of fiber.</div>
+            <div class="fact"><strong>More Facts:</strong> Apples can help support heart health, weight loss, and gut health.</div>
+        </div>
+    </div>
+
+</body>
+</html>

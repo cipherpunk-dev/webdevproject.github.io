@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orange Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            width: 80%;
+            max-width: 800px;
+            background-color: #fff7e6; /* light orange-like color */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border: 2px solid #ffa726;
+            position: relative;
+        }
+        .container::before,
+        .container::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 2px dashed #ffa726;
+            border-radius: 10px;
+            top: -5px;
+            left: -5px;
+            opacity: 0.5;
+            z-index: -1;
+        }
+        h1 {
+            color: #FF5722;
+            margin-bottom: 20px;
+            font-family: 'Georgia', serif;
+        }
+        .orange {
+            width: 150px;
+            height: 150px;
+            background-image: url('orange cross sec.jpg'); /* orange.png with transparent background */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 20px 0;
+        }
+        .facts {
+            margin-top: 20px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            font-family: 'Times New Roman', Times, serif;
+            text-align: left;
+        }
+        .fact {
+            margin-bottom: 10px;
+            line-height: 1.6;
+            color: #333;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Orange Portfolio</h1>
+        <div class="orange" id="orange"></div>
+        <div class="facts">
+            <div class="fact"><strong>Health Benefits:</strong> Oranges are high in vitamin C and fiber.</div>
+            <div class="fact"><strong>Nutritional Value:</strong> 1 medium orange has about 60 calories and 15g of carbohydrates.</div>
+            <div class="fact"><strong>More Facts:</strong> Oranges support immune health, skin health, and iron absorption.</div>
+        </div>
+    </div>
+
+</body>
+</html>
