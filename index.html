@@ -130,6 +130,7 @@
         <p>© 2024 Web Dev Project</p>
     </footer>
     <script>
+            //Dom = document object model; Ensures the code runs only after the entire DOM has been fully loaded and parsed.
             document.addEventListener("DOMContentLoaded", () => {
             const portfolioItems = document.querySelectorAll('.portfolio-item');
             const profilesLink = document.querySelector('a[href="#profiles"]');
@@ -153,7 +154,7 @@
                 });
             }, { threshold: 0.5 });
 
-            // Observe each portfolio item
+            // Observe each portfolio item to watch for visibility changes and trigger animations as they scroll into view.
             portfolioItems.forEach(item => observer.observe(item));
         });
     </script>
