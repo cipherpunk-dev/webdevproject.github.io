@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">    <!-- This sets the character encoding for the document to UTF-8, which supports most characters from all written languages. This ensures special characters display correctly. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--  This tells Internet Explorer to use the latest rendering engine available (e.g., Edge mode) for better compatibility and performance. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- makes resposive and scaling -->
     <title>Apple Portfolio</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f0f5;
-            display: flex;
-            flex-direction: column;
+            font-family: 'Arial', sans-serif;  /*if arial not available , switch to any sans-serif font*/
+            background-color: #f0f0f5; /* hexadecimal color code hai , each pair represent RGB intenisty (f0) , etc */
+            display: flex;  /* flexbox meaning bx apna size change kr skta h */
+            flex-direction: column;  /*size change(flex) along vertical only*/
             align-items: center;
             justify-content: center;
             margin: 0;
@@ -28,7 +28,7 @@
             border: 2px solid #d4a373;
             position: relative;
         }
-        .container::before,
+        .container::before, /* : These are pseudo-elements that create elements before and after the content of an element with the class container.*/
         .container::after {
             content: '';
             position: absolute;
@@ -49,7 +49,9 @@
         .apple {
             width: 150px;
             height: 150px;
-            background-image: url('apple-1.jpg'); /* apple-1.png with transparent background */
+            background-image: url('apple-1.jpg'); /* apple-1.png with transparent background  the <section> element is defined as a block of related elements.
+
+The <div> element is defined as a block of children elements.*/
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
