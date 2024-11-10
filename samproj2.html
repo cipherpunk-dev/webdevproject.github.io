@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finding Habitable Exoplanets</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            color: #f0f0f0;
+            background: linear-gradient(to bottom, #0b0c2a, #1b1d63, #03050f);
+            background-attachment: fixed;
+            overflow: hidden;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(20, 20, 60, 0.7);
+            border-radius: 15px;
+            box-shadow: 0 0 20px 5px rgba(0, 0, 50, 0.8);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #ffdd57;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            text-align: justify;
+            text-shadow: 1px 1px 3px #000;
+        }
+
+        .stars {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #fff;
+            animation: twinkle 2s infinite alternate;
+            border-radius: 50%;
+            box-shadow: 
+                500px 200px #fff, 
+                1000px 500px #ddd, 
+                700px 900px #bbb, 
+                1200px 300px #eee, 
+                150px 700px #fff, 
+                800px 1000px #ccc, 
+                1300px 150px #aaa;
+        }
+
+        @keyframes twinkle {
+            from {
+                opacity: 0.2;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="container">
+        <h1>Finding Habitable Exoplanets</h1>
+        <p>In the most recent decade, over a million stars were monitored to identify transiting planets. Manual interpretation of potential exoplanet candidates is labor-intensive and subject to human error, making the evaluation complex and challenging. Convolutional neural networks are well-suited for identifying Earth-like exoplanets in noisy time-series data with greater accuracy compared to traditional least-squares methods.</p>
+        <p>Advanced space missions like Kepler have provided astronomers with vast data to analyze, leading to significant discoveries and fueling hope for finding habitable worlds beyond Earth.</p>
+    </div>
+</body>
+</html>
